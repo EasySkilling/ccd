@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str_select_country">Select country</string>
+    <string name="str_enter_country_code">Enter the country name/code</string>
+    <string name="str_current_selected_country">Currently selected country</string>
+</resources>

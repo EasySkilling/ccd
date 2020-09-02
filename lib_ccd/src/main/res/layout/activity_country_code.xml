@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/color_root_bottom"
+    android:focusable="true"
+    tools:context=".country_code.CountryCodeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_horizontal_01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_login_bg_top"
+        app:layout_constraintBottom_toTopOf="@id/line_horizontal_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/shape_login_bg_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_horizontal_01" />
+
+    <com.lloydfinch.lib_ccd.lib_tools.view.LImageView
+        android:id="@+id/iv_back"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@id/line_horizontal_01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lloydfinch.lib_ccd.lib_tools.view.LTextView
+        android:id="@+id/tv_title"
+        style="@style/LoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/str_select_country"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_vertical_006"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_vertical_094"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <com.lloydfinch.lib_ccd.lib_tools.view.LEditText
+        android:id="@+id/et_country_code"
+        style="@style/LoginEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_login_txt_bg"
+        android:drawableStart="@mipmap/ic_search"
+        android:drawablePadding="8dp"
+        android:hint="@string/str_enter_country_code"
+        android:paddingStart="16dp"
+        android:textColorHint="@color/color_hint_blue"
+        android:textSize="12dp"
+        app:layout_constraintDimensionRatio="660:82"
+        app:layout_constraintEnd_toEndOf="@id/line_vertical_094"
+        app:layout_constraintStart_toStartOf="@id/line_vertical_006"
+        app:layout_constraintTop_toBottomOf="@id/line_horizontal_01" />
+
+    <com.lloydfinch.lib_ccd.lib_tools.view.LTextView
+        android:id="@+id/tv_select_country"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/color_selected_country_code"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:text="@string/str_current_selected_country"
+        android:textColor="@color/color_reg"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="750:69"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_country_code" />
+
+    <com.lloydfinch.lib_ccd.lib_tools.view.LTextView
+        android:id="@+id/tv_current_country"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:text="China"
+        android:textColor="@color/color_base_txt"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="750:97"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_country" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_country"
+        tools:listitem="@layout/layout_item_country_code" />
+
+    <com.lloydfinch.lib_ccd.country_code.FasterLocationView
+        android:id="@+id/fast_location_view"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/color_transparent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/recycler_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

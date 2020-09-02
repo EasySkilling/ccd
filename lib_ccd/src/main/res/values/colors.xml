@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_root_bottom">#0386ea</color>
+    <color name="color_txt_bg">#10386D</color>
+    <color name="color_bg_start">#0950B3</color>
+    <color name="color_bg_top">#0951B4</color>
+    <color name="color_bg_end">#123763</color>
+    <color name="color_base_txt">#D8D8D8</color>
+    <color name="color_txt_bg_press">#0A3165</color>
+    <color name="color_reg">#FDC04B</color>
+    <color name="color_base_btn">#AD4604</color>
+    <color name="color_hint_blue">#44A3FD</color>
+    <color name="color_selected_country_code">#3310091B</color>
+    <color name="color_transparent">#00000000</color>
+
+</resources>
